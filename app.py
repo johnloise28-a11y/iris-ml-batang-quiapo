@@ -315,7 +315,7 @@ def load_data():
 def train_and_save(k=5):
     iris, _ = load_data()
     X, y = iris.data, iris.target
-    X_tr, X_te, y_tr, y_te = train_test_split(X, y, test_size=0.2,
+    X_tr, X_te, y_tr, y_te = train_test_split(X, y, test_size=0.3,
                                                random_state=42, stratify=y)
     scaler = StandardScaler()
     X_tr_sc = scaler.fit_transform(X_tr)
